@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Тестовая страница</title>   
+    </head>
+    <body>
+        <h1>Первая страница с JS</h1>
+        <button type="button">Player 1: Chris</button>
+        <script>
+            const button = document.querySelector("button");
+
+            button.addEventListener("click", updateName);
+
+            function updateName() {
+                const name = prompt("Enter a new name");
+                button.textContent = `Player 1: ${name}`
+            }
+        </script>
+    </body>
+</html>
