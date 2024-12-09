@@ -1,6 +1,6 @@
 function countBy(x, n){
     let z = [];
-    for(i = x; i <= n; i += x){
+    for(i = x; i <= n*x; i += x){
         z.push(i);
     }
     return z;
@@ -14,5 +14,5 @@ function findNeedle(where){
     }
 }
 
-console.log(countBy(1, 10));
+console.log(countBy(2, 10));
 console.log(findNeedle(['ыв', 'игла', 's', 's', 's']));

@@ -18,17 +18,21 @@ function glassLetters(text){
     text = text.toLowerCase();
     console.log(text);
     let glassFound = [];
-    for(let i = 0; i < text.length; i++){;
-        if(text[i] in glass){;
-            glassFound.push(text[i]);
+    for(let i = 0; i < text.length; i++){
+        //console.log(text[i]);
+        for(let k = 0; k < glass.length; k++){
+            if(text[i] === glass[k]){
+                glassFound.push(text[i]);
+                break
+            }
         }
     }
     return glassFound;
 }
 
-let glass = ['a', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я', 'a', 'e', 'i', 'o', 'u', 'y'];
+let glass = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я', 'a', 'e', 'i', 'o', 'u', 'y'];
 numString = numberToString(myNumber);
 console.log(typeof numString, numString);
 console.log(lenString`My name is Oleg.`);
 console.log(lenText(myText));
-console.log(glassLetters('Алё привет'));
+console.log(glassLetters('Алё привеет'));
