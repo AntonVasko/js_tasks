@@ -6,9 +6,9 @@ for(let i = 0; i < cities.length; i++){
     let tinput = '';
     for(let i = 0; i < input.length; i++){
         if(i==0){
-            tinput += input[i].toUpperCase();
+            tinput[i] = input[i].toUpperCase();
         } else {
-            tinput += input[i].toLowerCase();
+            tinput[i] = input[i].toLowerCase();
         }
     }
     let result = tinput;
