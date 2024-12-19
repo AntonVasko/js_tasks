@@ -1,0 +1,32 @@
+html {
+    width: 100%;
+    height: inherit;
+    background: #ddd;
+  }
+
+  canvas {
+    display: block;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .button1 {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+
+  .button2 {
+    position: absolute;
+    top: 5px;
+    left: 100px;
+  }
+
+  .my_arr{
+    position: absolute;
+    top: 50px;
+    left: 10px;
+  }
+
