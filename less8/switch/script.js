@@ -20,6 +20,6 @@ function setWeather() {
       para.textContent = "Дождя нет, но небо серое и мрачное; он все может измениться в любую минуту, поэтому на всякий случай возьмите дождевик.";
       break;
     default:
-      para.textContent = "";
+      para.textContent = "Сейчас сдесь появится резульат";
   }
 }

@@ -1,33 +1,33 @@
 .output * {
-    box-sizing: ;
+    box-sizing: 200px;
   }
   
   .output ul {
-    padding-left: ;
+    padding-left: 20px;
   }
   
   .output li {
-    display: ;
-    float: ;
-    width: ;
-    border: ;
-    padding: ;
-    height: ;
-    background-color: ;
-    color: ;
+    display: block;
+    float: left;
+    width: 90px;
+    border: 10px solid white;
+    padding: 10px;
+    height: 90px;
+    background-color: olive;
+    color: yellowgreen;
   }
   
   html {
-    font-family: ;
+    font-family: sans-serif;
   }
   
   h2 {
-    font-size: ;
+    font-size: 25px;
   }
   
   
   body {
-    margin: ;
-    background: ;
+    margin: 5px;
+    background: 50px;
   }
   

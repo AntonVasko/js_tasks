@@ -37,22 +37,25 @@ function workWithMassive(){
 }
 
 function workWithStudents(){
-    let checkedStudents = [];
-    for(i = 0; i < students.length; i += 2){
-        for(k = 0; k <= checkedStudents.length; k += 2){
-            if (k == checkedStudents.length){
-                checkedStudents.push(students[i], students[i+1]);
-                break;
-            } else if (students[i] <= checkedStudents[k]){
-                checkedStudents.push('','');
-                for(j = checkedStudents.length; j > k; j-= 2){
-                    checkedStudents[j-1] = checkedStudents[j-3];
-                    checkedStudents[j] = checkedStudents[j-2];
+    let checkedStudents = [students[0], students[1]];
+    let maxYear = students[0];
+    for(i = 2; i < students.length; i += 2){
+        if (students[i] >= maxYear){
+            checkedStudents.push([students[i], students[i+1]])
+        } else {
+            checkedStudents.push('', '');
+            for(k = 0; k < checkedStudents.length - 2; k += 2){
+                if (students[i] < checkedStudents[k]) {
+                    for (j = checkedStudents.length; j > k; j--){
+                        checkedStudents[j] = checkedStudents[j - 2];
+                        checkedStudents[k] = students[i];
+                        checkedStudents[k+1] = students[i+1];
+                    }
                 }
             }
-            console.log(checkedStudents);
-        }    
+        }
     }
+    return checkedStudents;
 }
 
 console.log(workWithStudents());
