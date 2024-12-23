@@ -6,7 +6,7 @@ let three = 0;
 let stroka = 0;
 let notstorka = 0;
 
-let students = [11, 'Ваня', 12, 'Артём', 15, 'Олег', 9, 'Кирилл', 61, 'Саша', 8, 'Слава']
+let students = [11, 'Ваня', 12, 'Артём', 15, 'Олег', 9, 'Кирилл', 61, 'Саша', 8, 'Слава', 13, 'Артемий']
 
 function randomValueFromArray(array){
     const random = Math.floor(Math.random()*array.length);
@@ -41,16 +41,20 @@ function workWithStudents(){
     let maxYear = students[0];
     for(i = 2; i < students.length; i += 2){
         if (students[i] >= maxYear){
-            checkedStudents.push([students[i], students[i+1]])
+            checkedStudents.push(students[i])
+            checkedStudents.push(students[i+1])
+            maxYear = students[i];
         } else {
-            checkedStudents.push('', '');
+            checkedStudents.push('');
+            checkedStudents.push('');
             for(k = 0; k < checkedStudents.length - 2; k += 2){
                 if (students[i] < checkedStudents[k]) {
-                    for (j = checkedStudents.length; j > k; j--){
-                        checkedStudents[j] = checkedStudents[j - 2];
-                        checkedStudents[k] = students[i];
-                        checkedStudents[k+1] = students[i+1];
+                    for (j = checkedStudents.length-1; j > k+1; j--){
+                        checkedStudents[j] = checkedStudents[j-2];
                     }
+                    checkedStudents[k] = students[i];
+                    checkedStudents[k+1] = students[i+1];
+                    break;
                 }
             }
         }
