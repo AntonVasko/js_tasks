@@ -41,8 +41,8 @@ function workWithStudents(){
     let maxYear = students[0];
     for(i = 2; i < students.length; i += 2){
         if (students[i] >= maxYear){
-            checkedStudents.push(students[i])
-            checkedStudents.push(students[i+1])
+            checkedStudents.push(students[i]);
+            checkedStudents.push(students[i+1]);
             maxYear = students[i];
         } else {
             checkedStudents.push('');
@@ -59,7 +59,14 @@ function workWithStudents(){
             }
         }
     }
-    return checkedStudents;
+    let ans = '';
+    for (i = 0; i < checkedStudents.length; i+=2){
+        ans += checkedStudents[i];
+        ans += ' ';
+        ans += checkedStudents[i+1];
+        ans += '\n';
+    }
+    return ans;
 }
 
 console.log(workWithStudents());
