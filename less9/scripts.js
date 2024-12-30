@@ -66,24 +66,39 @@ function for3(){
     }
 }
 
-let for4mass = [10, 20, 30, 50, 235, 3000];
+let for4mass = [10, 20, 30, 50, 235, 3000, 100000];
 function for4(){
     for (i = 0; i < for4mass.length; i++){
-        console.log(Math.pow(10, for4mass[i].length));
-        console.log(for4mass[i])
-        if (for4mass[i][0] == 1 || for4mass[i][0] == 2 || for4mass[i][0] == 5){
+        if (for4mass[i].toString()[0] == '2' || for4mass[i].toString()[0] == '1' || for4mass[i].toString()[0] == '5'){
             console.log(for4mass[i]);
         }
     }
 }
 
-let n = 12;
-dowhile2(){
+let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+function dowhile1(){
+    i = -1;
+    do{
+        console.log(days[++i]);
+    } while (i < days.length-1);
+}
+
+let n = 13;
+function is_prime(number){
+    for (q = 2; q <= Math.pow(number, 0.5); q++){
+        if (i%q == 0){
+            return false
+        }
+    }
+    return true
+}
+
+function dowhile2(){
     i = 1
     do {
         i++
-        for(k = 2; k < i; k++){
-            if i
+        if (is_prime(i)){
+            console.log(i);
         }
-    } while(i <= n);
+    } while(i < n);
 }
