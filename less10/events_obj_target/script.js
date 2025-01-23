@@ -8,4 +8,4 @@ function bgChange() {
 }
 
 const container = document.querySelector('#container');
-container.addEventListener('click', event => event.target.style.backgroundColor = bgChange());
+container.addEventListener('click', e => e.target.style.backgroundColor = bgChange());
