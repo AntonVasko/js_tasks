@@ -1,6 +1,7 @@
 let b1 = document.querySelector('.dots');
 let b2 = document.querySelector('.circle');
 let text = document.querySelector('p');
+let img = document.querySelector('img');
 
 const dots = {
     dot1 : {
@@ -32,8 +33,10 @@ const circle = {
 
 b1.onclick = function() {
     text.textContent = dots.length();
+    img.src = 'dots.png';
 }
 
 b2.onclick = function() {
     text.textContent = circle.area();
+    img.src = 'circle.jpg';
 }
