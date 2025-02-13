@@ -1,0 +1,41 @@
+<body>
+    <h1>Выберите тип вычислений:</h1>
+    <button onclick="selectCalculation('distance')">Расстояние между точками</button>
+    <button onclick="selectCalculation('circle')">Площадь круга</button>
+
+    <!-- Изображение фигуры -->
+    <div id="image-container" class="hidden">
+        <img id="figure-image" src="" alt="Figure">
+    </div>
+
+    <!-- Форма для расстояния между точками -->
+    <div id="distance-form" class="hidden">
+        <h2>Введите координаты двух точек:</h2>
+        <label for="x1">X1:</label>
+        <input type="number" id="x1" required><br><br>
+        <label for="y1">Y1:</label>
+        <input type="number" id="y1" required><br><br>
+        <label for="x2">X2:</label>
+        <input type="number" id="x2" required><br><br>
+        <label for="y2">Y2:</label>
+        <input type="number" id="y2" required><br><br>
+        <button onclick="calculateDistance()">Вычислить расстояние</button>
+    </div>
+
+    <!-- Форма для площади круга -->
+    <div id="circle-form" class="hidden">
+        <h2>Введите координаты центра и радиус круга:</h2>
+        <label for="centerX">Center X:</label>
+        <input type="number" id="centerX" required><br><br>
+        <label for="centerY">Center Y:</label>
+        <input type="number" id="centerY" required><br><br>
+        <label for="radius">Radius:</label>
+        <input type="number" id="radius" required><br><br>
+        <button onclick="calculateCircleArea()">Вычислить площадь</button>
+    </div>
+
+    <!-- Результат -->
+    <div id="result" class="result hidden"></div>
+
+    <script src="script.js"></script>
+</body>
