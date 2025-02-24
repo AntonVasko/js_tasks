@@ -57,7 +57,9 @@ function initialize(products) {
     // if the category and search term are the same as they were the last time a
     // search was run, the results will be the same, so there is no point running
     // it again — just return out of the function
-    if (category.value != lastCategory || searchTerm.value.trim() != lastSearch) { //todo or - ||
+    if (category.value === lastCategory && searchTerm.value.trim() === lastSearch) { //todo or - ||
+      return;
+    } else {
       // update the record of last category and search term
       lastCategory = category.value;
       lastSearch = searchTerm.value.trim();
