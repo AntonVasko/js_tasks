@@ -1,0 +1,38 @@
+body {
+    background-color:aquamarine;
+    font: italic bold 16px/2 cursive;
+    margin: 0 auto;
+}
+
+hr {
+    border: 25px ridge lightskyblue;
+}
+
+main {
+    margin: 25%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+aside {
+    width: 25%;
+    display: flex;
+}
+
+div {
+    display: flex;
+}
+
+section {
+    height: 35%;
+    width: 42%;
+    margin: 2%;
+}
+
+section img {
+    height: 100%;
+    width: 100%;
+}

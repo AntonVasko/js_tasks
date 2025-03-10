@@ -1,0 +1,18 @@
+[
+{
+    "name" : "python",
+    "image" : "python.jpg"
+},
+{
+    "name" : "js",
+    "image" : "js.jpg"
+},
+{
+    "name" : "css",
+    "image" : "css.jpg"
+},
+{
+    "name" : "html",
+    "image" : "html.jpg"
+}
+]
