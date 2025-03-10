@@ -1,0 +1,73 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+    }
+    .project-card {
+        width: 100%;
+    }
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Карточки проектов */
+.project-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    width: calc(33% - 2rem);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-details {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-top: 1px solid #ddd;
+}
+
+/* Навыки */
+.skill-bar {
+    width: var(--progress);
+    height: 10px;
+    background: #4CAF50;
+    transition: width 0.3s;
+}
+
+/* Форма */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Анимация */
+.fade-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+}

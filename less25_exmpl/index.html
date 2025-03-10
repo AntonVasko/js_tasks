@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav-logo">Мое портфолио</div>
+            <ul class="nav-menu">
+                <li><a href="#portfolio">Проекты</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="portfolio" class="section">
+        <h2>Мои проекты</h2>
+        <div class="filter">
+            <button class="filter-btn" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="web">Веб-разработка</button>
+            <button class="filter-btn" data-filter="mobile">Мобильная разработка</button>
+        </div>
+        <div class="project-container">
+            <!-- Пример карточки проекта -->
+            <div class="project-card web">
+                <h3>Проект 1</h3>
+                <p>Описание проекта...</p>
+                <div class="technologies">HTML, CSS, JS</div>
+                <a href="#" class="project-link">Ссылка</a>
+                <button class="info-btn">Подробнее</button>
+                <div class="project-details hidden">
+                    <p>Подробное описание...</p>
+                </div>
+            </div>
+            <!-- Добавьте другие карточки аналогично -->
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Мои навыки</h2>
+        <div class="skill-list">
+            <div class="skill-item">
+                <h3>HTML/CSS</h3>
+                <div class="skill-bar" style="--progress: 90%"></div>
+            </div>
+            <div class="skill-item">
+                <h3>JavaScript</h3>
+                <div class="skill-bar" style="--progress: 80%"></div>
+            </div>
+            <!-- Добавьте другие навыки -->
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Обратная связь</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Ваш email" required>
+            <textarea placeholder="Сообщение"></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <script src="sc.js"></script>
+</body>
+</html>
